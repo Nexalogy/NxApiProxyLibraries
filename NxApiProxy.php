@@ -736,7 +736,7 @@ class NxApiAutomatedReport
       return NxApi::call($url,$post);
    }          
               
-   public static function removeFromAlert($projectId, $alertId, $automatedReportTemplateId, $options=array())
+   public static function removeFromAlert($projectId, $alertId, $automatedReportTemplateId, $filterId, $options=array())
    {
       $url = '/automatedReport/removeFromAlert';
       
@@ -744,6 +744,7 @@ class NxApiAutomatedReport
 			'projectId'=>$projectId,
 			'alertId'=>$alertId,
 			'automatedReportTemplateId'=>$automatedReportTemplateId,
+			'filterId'=>$filterId,
 		);
       if(@$options && is_array($options))
       $post = array_merge($post,$options);
@@ -841,7 +842,7 @@ class NxApiAutomatedReport
       return NxApi::call($url,$post);
    }          
               
-   public static function generate($projectId, $id, $reason, $filename, $options=array('filterDescription'=>''))
+   public static function generate($projectId, $id, $reason, $filename, $options=array('filterDescription'=>'', 'notify'=>''))
    {
       $url = '/automatedReport/generate';
       
