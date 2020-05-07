@@ -1061,6 +1061,18 @@ const NxApiEndpoints = {
             },
             
                       
+          getProjectDataDates : function(data,callback){
+              if(typeof(data)==="function")
+              {
+                  callback = data;
+                  data = {};   
+              }    
+              let callUrl = this.url + "/getProjectDataDates";
+              
+              return Nx.Api.call(callUrl,data,callback);
+            },
+            
+                      
           get : function(data,callback){
               if(typeof(data)==="function")
               {

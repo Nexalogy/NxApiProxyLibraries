@@ -4147,6 +4147,18 @@ class NxApiProject
       return NxApi::call($url,$post);
    }          
               
+   public static function getProjectDataDates($projectId, $options=array())
+   {
+      $url = '/project/getProjectDataDates';
+      
+      $post = array(
+			'projectId'=>$projectId,
+		);
+      if(@$options && is_array($options))
+      $post = array_merge($post,$options);
+      return NxApi::call($url,$post);
+   }          
+              
    public static function get($projectId, $options=array())
    {
       $url = '/project/get';
