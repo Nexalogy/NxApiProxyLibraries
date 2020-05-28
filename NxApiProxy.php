@@ -1214,6 +1214,20 @@ class NxApiAutomatedReport
       return NxApi::call($url,$post);
    }          
               
+   public static function generateAnalyzeDoc($projectId, $metas, $reportsConfigs, $options=array())
+   {
+      $url = '/automatedReport/generateAnalyzeDoc';
+      
+      $post = array(
+			'projectId'=>$projectId,
+			'metas'=>$metas,
+			'reportsConfigs'=>$reportsConfigs,
+		);
+      if(@$options && is_array($options))
+      $post = array_merge($post,$options);
+      return NxApi::call($url,$post);
+   }          
+              
    public static function generate($projectId, $id, $reason, $filename, $options=array('filterDescription'=>'', 'notify'=>''))
    {
       $url = '/automatedReport/generate';

@@ -3252,6 +3252,18 @@ const NxApiEndpoints = {
             },
             
                       
+          generateAnalyzeDoc : function(data,callback){
+              if(typeof(data)==="function")
+              {
+                  callback = data;
+                  data = {};   
+              }    
+              let callUrl = this.url + "/generateAnalyzeDoc";
+              
+              return Nx.Api.call(callUrl,data,callback);
+            },
+            
+                      
           generate : function(data,callback){
               if(typeof(data)==="function")
               {
@@ -3579,6 +3591,7 @@ const NxApiEndpoints = {
 		"/gniphistorical/prepareJobs",
 		"/gniphistorical/generateQuote",
 		"/automatedReport/generateForAlert",
+		"/automatedReport/generateAnalyzeDoc",
 		"/automatedReport/generate",
 		"/import/search",
 		"/import/hydrateTweets",
