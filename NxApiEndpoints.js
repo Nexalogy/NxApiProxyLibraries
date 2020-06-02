@@ -1,10 +1,10 @@
 Mail was not sent. Body was :
 <br /> Error : Array
 (
-    [type] => 64
-    [message] => Cannot redeclare AutomatedReportController::getRenderObjs()
+    [type] => 4
+    [message] => syntax error, unexpected 'file_put_contents' (T_STRING)
     [file] => /var/www/application/controllers/api/automatedReportController.php
-    [line] => 393
+    [line] => 774
 )
 
 debug backtrace : 
@@ -87,7 +87,7 @@ SERVER : Array
     [CONTEXT_DOCUMENT_ROOT] => /var/www
     [SERVER_ADMIN] => webmaster@localhost
     [SCRIPT_FILENAME] => /var/www/index.php
-    [REMOTE_PORT] => 33524
+    [REMOTE_PORT] => 33586
     [REDIRECT_URL] => /proxy/js/module
     [REDIRECT_QUERY_STRING] => /proxy/js/module
     [GATEWAY_INTERFACE] => CGI/1.1
@@ -97,8 +97,8 @@ SERVER : Array
     [REQUEST_URI] => /proxy/js/module
     [SCRIPT_NAME] => /index.php
     [PHP_SELF] => /index.php
-    [REQUEST_TIME_FLOAT] => 1591109877.735
-    [REQUEST_TIME] => 1591109877
+    [REQUEST_TIME_FLOAT] => 1591109925.488
+    [REQUEST_TIME] => 1591109925
 )
 
 GET : Array
