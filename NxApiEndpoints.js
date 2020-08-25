@@ -929,6 +929,18 @@ const NxApiEndpoints = {
           
           url : "/project",
       
+          testSendEmail : function(data,callback){
+              if(typeof(data)==="function")
+              {
+                  callback = data;
+                  data = {};   
+              }    
+              let callUrl = this.url + "/testSendEmail";
+              
+              return Nx.Api.call(callUrl,data,callback);
+            },
+            
+                      
           duplicate : function(data,callback){
               if(typeof(data)==="function")
               {
@@ -948,6 +960,18 @@ const NxApiEndpoints = {
                   data = {};   
               }    
               let callUrl = this.url + "/duplicateWithData";
+              
+              return Nx.Api.call(callUrl,data,callback);
+            },
+            
+                      
+          copyData : function(data,callback){
+              if(typeof(data)==="function")
+              {
+                  callback = data;
+                  data = {};   
+              }    
+              let callUrl = this.url + "/copyData";
               
               return Nx.Api.call(callUrl,data,callback);
             },
@@ -1427,28 +1451,6 @@ const NxApiEndpoints = {
       },
       
       
-              //ignoring /billing/subscriptionSettings
-              //ignoring /billing/product
-              //ignoring /billing/paypalReference
-              //ignoring /billing/apiKey
-              //ignoring /billing/admin
-              //ignoring /billing/subscription
-              //ignoring /billing/invoice
-              //ignoring /billing/creditUsage
-              //ignoring /billing/invoiceItem
-              //ignoring /billing/purchasedProduct
-              //ignoring /billing/transaction
-              //ignoring /billing/module
-              //ignoring /billing/paypalVault
-              //ignoring /billing/creditBalance
-              //ignoring /billing/domainGroup
-              //ignoring /billing/credit
-              //ignoring /billing/plan
-              //ignoring /billing/gastank
-              //ignoring /billing/exchange
-              //ignoring /billing/address
-              //ignoring /billing/subscriptionModule
-              //ignoring /billing/domain
           
       Document : {
           
@@ -1485,18 +1487,6 @@ const NxApiEndpoints = {
                   data = {};   
               }    
               let callUrl = this.url + "/get";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-          getExamples : function(data,callback){
-              if(typeof(data)==="function")
-              {
-                  callback = data;
-                  data = {};   
-              }    
-              let callUrl = this.url + "/getExamples";
               
               return Nx.Api.call(callUrl,data,callback);
             },
@@ -1613,97 +1603,6 @@ const NxApiEndpoints = {
                   data = {};   
               }    
               let callUrl = this.url + "/setForProject";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-      },
-      
-      
-          
-      Dshistorical : {
-          
-          url : "/dshistorical",
-      
-          request : function(data,callback){
-              if(typeof(data)==="function")
-              {
-                  callback = data;
-                  data = {};   
-              }    
-              let callUrl = this.url + "/request";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-          deleteRequest : function(data,callback){
-              if(typeof(data)==="function")
-              {
-                  callback = data;
-                  data = {};   
-              }    
-              let callUrl = this.url + "/deleteRequest";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-          generateCSDL : function(data,callback){    
-              let callUrl = this.url + "/generateCSDL";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-          getGeneratedCSDL : function(data,callback){    
-              let callUrl = this.url + "/getGeneratedCSDL";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-          confirmRevisedCSDL : function(data,callback){
-              if(typeof(data)==="function")
-              {
-                  callback = data;
-                  data = {};   
-              }    
-              let callUrl = this.url + "/confirmRevisedCSDL";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-          prepare : function(data,callback){    
-              let callUrl = this.url + "/prepare";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-          getPreparedList : function(data,callback){
-              if(typeof(data)==="function")
-              {
-                  callback = data;
-                  data = {};   
-              }    
-              let callUrl = this.url + "/getPreparedList";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-          start : function(data,callback){    
-              let callUrl = this.url + "/start";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-          cleanHistoricalArchive : function(data,callback){    
-              let callUrl = this.url + "/cleanHistoricalArchive";
               
               return Nx.Api.call(callUrl,data,callback);
             },
@@ -2610,141 +2509,6 @@ const NxApiEndpoints = {
       
       
           
-      Gniphistorical : {
-          
-          url : "/gniphistorical",
-      
-          request : function(data,callback){
-              if(typeof(data)==="function")
-              {
-                  callback = data;
-                  data = {};   
-              }    
-              let callUrl = this.url + "/request";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-          deleteRequest : function(data,callback){
-              if(typeof(data)==="function")
-              {
-                  callback = data;
-                  data = {};   
-              }    
-              let callUrl = this.url + "/deleteRequest";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-          getRequestList : function(data,callback){
-              if(typeof(data)==="function")
-              {
-                  callback = data;
-                  data = {};   
-              }    
-              let callUrl = this.url + "/getRequestList";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-          getRequest : function(data,callback){
-              if(typeof(data)==="function")
-              {
-                  callback = data;
-                  data = {};   
-              }    
-              let callUrl = this.url + "/getRequest";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-          getPreparedJobs : function(data,callback){    
-              let callUrl = this.url + "/getPreparedJobs";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-          prepareJobs : function(data,callback){
-              if(typeof(data)==="function")
-              {
-                  callback = data;
-                  data = {};   
-              }    
-              let callUrl = this.url + "/prepareJobs";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-          startJobs : function(data,callback){
-              if(typeof(data)==="function")
-              {
-                  callback = data;
-                  data = {};   
-              }    
-              let callUrl = this.url + "/startJobs";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-          getJobStatus : function(data,callback){
-              if(typeof(data)==="function")
-              {
-                  callback = data;
-                  data = {};   
-              }    
-              let callUrl = this.url + "/getJobStatus";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-          generateQuote : function(data,callback){
-              if(typeof(data)==="function")
-              {
-                  callback = data;
-                  data = {};   
-              }    
-              let callUrl = this.url + "/generateQuote";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-          modifyRequest : function(data,callback){
-              if(typeof(data)==="function")
-              {
-                  callback = data;
-                  data = {};   
-              }    
-              let callUrl = this.url + "/modifyRequest";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-          redownloadPreparedJob : function(data,callback){
-              if(typeof(data)==="function")
-              {
-                  callback = data;
-                  data = {};   
-              }    
-              let callUrl = this.url + "/redownloadPreparedJob";
-              
-              return Nx.Api.call(callUrl,data,callback);
-            },
-            
-                      
-      },
-      
-      
-          
       AccountProvider : {
           
           url : "/accountProvider",
@@ -2963,8 +2727,6 @@ const NxApiEndpoints = {
       },
       
       
-              //ignoring /data/clean
-              //ignoring /data/enhance
           
       SdaWord : {
           
@@ -3591,6 +3353,7 @@ const NxApiEndpoints = {
 		"/export/data",
 		"/export/project",
 		"/project/duplicateWithData",
+		"/project/copyData",
 		"/project/cloneWithData",
 		"/project/createFromProjectData",
 		"/project/waitForPreprocessing",
@@ -3600,8 +3363,6 @@ const NxApiEndpoints = {
 		"/filter/modify",
 		"/dictionary/applyCsvCustom",
 		"/jobTemplate/execute",
-		"/gniphistorical/prepareJobs",
-		"/gniphistorical/generateQuote",
 		"/automatedReport/generateForAlert",
 		"/automatedReport/generateAnalyzeDoc",
 		"/automatedReport/generate",
