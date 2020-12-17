@@ -1,22 +1,36 @@
 {
-    "title": "CodeIgniter\\Exceptions\\PageNotFoundException",
-    "type": "CodeIgniter\\Exceptions\\PageNotFoundException",
-    "code": 404,
-    "message": "Controller or its method is not found: \\App\\Controllers\\Proxy::php",
-    "file": "/var/www/system/Exceptions/PageNotFoundException.php",
-    "line": 14,
+    "title": "ErrorException",
+    "type": "ErrorException",
+    "code": 500,
+    "message": "Undefined variable: apiKey",
+    "file": "/var/www/app/Controllers/proxyController.php",
+    "line": 94,
     "trace": [
         {
-            "file": "/var/www/system/CodeIgniter.php",
-            "line": 985,
-            "function": "forPageNotFound",
-            "class": "CodeIgniter\\Exceptions\\PageNotFoundException",
-            "type": "::"
+            "file": "/var/www/app/Controllers/proxyController.php",
+            "line": 94,
+            "function": "errorHandler",
+            "class": "CodeIgniter\\Debug\\Exceptions",
+            "type": "->"
         },
         {
             "file": "/var/www/system/CodeIgniter.php",
-            "line": 328,
-            "function": "display404errors",
+            "line": 918,
+            "function": "php",
+            "class": "App\\Controllers\\proxyController",
+            "type": "->"
+        },
+        {
+            "file": "/var/www/system/CodeIgniter.php",
+            "line": 404,
+            "function": "runController",
+            "class": "CodeIgniter\\CodeIgniter",
+            "type": "->"
+        },
+        {
+            "file": "/var/www/system/CodeIgniter.php",
+            "line": 312,
+            "function": "handleRequest",
             "class": "CodeIgniter\\CodeIgniter",
             "type": "->"
         },
