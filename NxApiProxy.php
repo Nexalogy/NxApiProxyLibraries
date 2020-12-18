@@ -4,11 +4,11 @@
     "code": 500,
     "message": "Undefined variable: apiKey",
     "file": "/var/www/app/Controllers/proxyController.php",
-    "line": 94,
+    "line": 130,
     "trace": [
         {
             "file": "/var/www/app/Controllers/proxyController.php",
-            "line": 94,
+            "line": 130,
             "function": "errorHandler",
             "class": "CodeIgniter\\Debug\\Exceptions",
             "type": "->"
