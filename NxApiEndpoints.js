@@ -2,7 +2,7 @@
 				const NxApiEndpoints = {
 			
 			Users : {
-				url : "/users",
+				url : "/Users",
 			
 						login : function(data,callback){
 							if(typeof(data)==="function")
@@ -249,12 +249,12 @@
 				},
 			
 			Download : {
-				url : "/download",
+				url : "/Download",
 			
 				},
 			
 			Toad : {
-				url : "/toad",
+				url : "/Toad",
 			
 						getStatus : function(data,callback){
 							if(typeof(data)==="function")
@@ -285,7 +285,7 @@
 				},
 			
 			Alert : {
-				url : "/alert",
+				url : "/Alert",
 			
 						get : function(data,callback){
 							if(typeof(data)==="function")
@@ -406,8 +406,8 @@
 					
 				},
 			
-			Captureapi : {
-				url : "/captureapi",
+			CaptureApi : {
+				url : "/CaptureApi",
 			
 						subscribeProject : function(data,callback){
 							if(typeof(data)==="function")
@@ -438,7 +438,7 @@
 				},
 			
 			Twitter : {
-				url : "/twitter",
+				url : "/Twitter",
 			
 						callApi : function(data,callback){
 							if(typeof(data)==="function")
@@ -456,7 +456,7 @@
 				},
 			
 			Instance : {
-				url : "/instance",
+				url : "/Instance",
 			
 						create : function(data,callback){
 							if(typeof(data)==="function")
@@ -552,17 +552,17 @@
 				},
 			
 			Test : {
-				url : "/test",
+				url : "/Test",
 			
 				},
 			
 			Home : {
-				url : "/home",
+				url : "/Home",
 			
 				},
 			
 			Export : {
-				url : "/export",
+				url : "/Export",
 			
 						download : function(data,callback){
 							if(typeof(data)==="function")
@@ -632,7 +632,7 @@
 				},
 			
 			Import : {
-				url : "/import",
+				url : "/Import",
 			
 						search : function(data,callback){
 							if(typeof(data)==="function")
@@ -676,7 +676,7 @@
 				},
 			
 			Geoplaces : {
-				url : "/geoplaces",
+				url : "/Geoplaces",
 			
 						create : function(data,callback){
 							if(typeof(data)==="function")
@@ -753,7 +753,7 @@
 				},
 			
 			Reports : {
-				url : "/reports",
+				url : "/Reports",
 			
 						update : function(data,callback){
 							if(typeof(data)==="function")
@@ -817,7 +817,7 @@
 				},
 			
 			Feature : {
-				url : "/feature",
+				url : "/Feature",
 			
 						changeAccess : function(data,callback){
 							if(typeof(data)==="function")
@@ -855,7 +855,7 @@
 				},
 			
 			Translation : {
-				url : "/translation",
+				url : "/Translation",
 			
 						translateText : function(data,callback){
 							if(typeof(data)==="function")
@@ -893,7 +893,7 @@
 				},
 			
 			Jobs : {
-				url : "/jobs",
+				url : "/Jobs",
 			
 						status : function(data,callback){
 							if(typeof(data)==="function")
@@ -931,7 +931,7 @@
 				},
 			
 			Transmit : {
-				url : "/transmit",
+				url : "/Transmit",
 			
 						data : function(data,callback){
 							if(typeof(data)==="function")
@@ -949,7 +949,7 @@
 				},
 			
 			Js : {
-				url : "/js",
+				url : "/Js",
 			
 						getScript : function(data,callback){
 							if(typeof(data)==="function")
@@ -979,8 +979,8 @@
 					
 				},
 			
-			Automatedreport : {
-				url : "/automatedreport",
+			AutomatedReport : {
+				url : "/AutomatedReport",
 			
 						addToAlert : function(data,callback){
 							if(typeof(data)==="function")
@@ -1179,13 +1179,13 @@
 					
 				},
 			
-			Proxycontroller : {
-				url : "/proxycontroller",
+			ProxyController : {
+				url : "/proxyController",
 			
 				},
 			
-			Jobtemplate : {
-				url : "/jobtemplate",
+			JobTemplate : {
+				url : "/JobTemplate",
 			
 						get : function(data,callback){
 							if(typeof(data)==="function")
@@ -1294,7 +1294,7 @@
 				},
 			
 			Filter : {
-				url : "/filter",
+				url : "/Filter",
 			
 						compileFilter : function(data,callback){
 							if(typeof(data)==="function")
@@ -1390,7 +1390,7 @@
 				},
 			
 			Search : {
-				url : "/search",
+				url : "/Search",
 			
 						create : function(data,callback){
 							if(typeof(data)==="function")
@@ -1537,13 +1537,13 @@
 					
 				},
 			
-			Basecontroller : {
-				url : "/basecontroller",
+			BaseController : {
+				url : "/BaseController",
 			
 				},
 			
 			Upload : {
-				url : "/upload",
+				url : "/Upload",
 			
 						getToken : function(data,callback){
 						let callUrl = this.url + "/getToken";
@@ -1567,8 +1567,8 @@
 					
 				},
 			
-			Autocapture : {
-				url : "/autocapture",
+			AutoCapture : {
+				url : "/AutoCapture",
 			
 						run : function(data,callback){
 							if(typeof(data)==="function")
@@ -1651,7 +1651,7 @@
 				},
 			
 			Dictionary : {
-				url : "/dictionary",
+				url : "/Dictionary",
 			
 						getWords : function(data,callback){
 							if(typeof(data)==="function")
@@ -1786,7 +1786,7 @@
 				},
 			
 			Document : {
-				url : "/document",
+				url : "/Document",
 			
 						delete : function(data,callback){
 							if(typeof(data)==="function")
@@ -1856,7 +1856,7 @@
 				},
 			
 			Ingestion : {
-				url : "/ingestion",
+				url : "/Ingestion",
 			
 						retrieveProjects : function(data,callback){
 							if(typeof(data)==="function")
@@ -1887,7 +1887,7 @@
 				},
 			
 			Publisher : {
-				url : "/publisher",
+				url : "/Publisher",
 			
 						getList : function(data,callback){
 							if(typeof(data)==="function")
@@ -1930,8 +1930,8 @@
 					
 				},
 			
-			Reportconfig : {
-				url : "/reportconfig",
+			ReportConfig : {
+				url : "/ReportConfig",
 			
 						set : function(data,callback){
 							if(typeof(data)==="function")
@@ -2001,7 +2001,7 @@
 				},
 			
 			Project : {
-				url : "/project",
+				url : "/Project",
 			
 						duplicate : function(data,callback){
 							if(typeof(data)==="function")
@@ -2292,12 +2292,12 @@
 				},
 			
 			Docs : {
-				url : "/docs",
+				url : "/Docs",
 			
 				},
 			
-			Projectfolder : {
-				url : "/projectfolder",
+			ProjectFolder : {
+				url : "/ProjectFolder",
 			
 						getList : function(data,callback){
 						let callUrl = this.url + "/getList";
@@ -2347,8 +2347,8 @@
 					
 				},
 			
-			Processdata : {
-				url : "/processdata",
+			ProcessData : {
+				url : "/ProcessData",
 			
 						processNERD : function(data,callback){
 							if(typeof(data)==="function")
@@ -2379,32 +2379,32 @@
 				},
 			
 			_asyncInfo : [
-				"/alert/check",
-		"/alert/testEmail",
-		"/instance/create",
-		"/export/data",
-		"/export/project",
-		"/import/search",
-		"/import/file",
-		"/import/augmentation",
-		"/reports/generate",
-		"/automatedreport/generateForAlert",
-		"/automatedreport/generateAnalyzeDoc",
-		"/automatedreport/generate",
-		"/jobtemplate/execute",
-		"/filter/compileFilter",
-		"/filter/create",
-		"/filter/modify",
-		"/search/capture",
-		"/autocapture/run",
-		"/dictionary/applyCsvCustom",
-		"/project/duplicateWithData",
-		"/project/cloneWithData",
-		"/project/copyData",
-		"/project/createFromProjectData",
-		"/project/waitForPreprocessing",
-		"/project/filterMultipleProjectsIntoOne",
-		"/processdata/processNERD",
-		"/processdata/reprocessAspect"
+				"/Alert/check",
+		"/Alert/testEmail",
+		"/Instance/create",
+		"/Export/data",
+		"/Export/project",
+		"/Import/search",
+		"/Import/file",
+		"/Import/augmentation",
+		"/Reports/generate",
+		"/AutomatedReport/generateForAlert",
+		"/AutomatedReport/generateAnalyzeDoc",
+		"/AutomatedReport/generate",
+		"/JobTemplate/execute",
+		"/Filter/compileFilter",
+		"/Filter/create",
+		"/Filter/modify",
+		"/Search/capture",
+		"/AutoCapture/run",
+		"/Dictionary/applyCsvCustom",
+		"/Project/duplicateWithData",
+		"/Project/cloneWithData",
+		"/Project/copyData",
+		"/Project/createFromProjectData",
+		"/Project/waitForPreprocessing",
+		"/Project/filterMultipleProjectsIntoOne",
+		"/ProcessData/processNERD",
+		"/ProcessData/reprocessAspect"
 				]
 		};
