@@ -1327,6 +1327,26 @@
 						},
 
 					
+						autocompleteCities : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/autocompleteCities";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getCountryList : function(data,callback){
+						let callUrl = this.url + "/getCountryList";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
 				},
 			
 			Docs : {

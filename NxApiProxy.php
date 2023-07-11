@@ -1277,6 +1277,29 @@
 						return NxApi::call($url,$post);
 					}
 				
+					public static function autocompleteCities($name, $options=array('limit'=>''))
+					{
+						$url = '/Geoplaces/autocompleteCities';
+
+						$post = array(
+								'name'=>$name,
+		);
+						if(@$options && is_array($options))
+						$post = array_merge($post,$options);
+						return NxApi::call($url,$post);
+					}
+				
+					public static function getCountryList($options=array())
+					{
+						$url = '/Geoplaces/getCountryList';
+
+						$post = array(
+							);
+						if(@$options && is_array($options))
+						$post = array_merge($post,$options);
+						return NxApi::call($url,$post);
+					}
+				
 				}
 			
 				class NxApiHome
