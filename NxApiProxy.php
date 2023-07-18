@@ -1277,12 +1277,13 @@
 						return NxApi::call($url,$post);
 					}
 				
-					public static function autocompleteCities($name, $options=array('limit'=>''))
+					public static function autocompleteCities($name, $countryCode, $options=array('limit'=>''))
 					{
 						$url = '/Geoplaces/autocompleteCities';
 
 						$post = array(
 								'name'=>$name,
+			'countryCode'=>$countryCode,
 		);
 						if(@$options && is_array($options))
 						$post = array_merge($post,$options);
@@ -2216,7 +2217,7 @@
 				class NxApiSearch
 				{
 			
-					public static function create($projectId, $type, $name, $options=array('exactPhrase'=>'', 'ands'=>'', 'ors'=>'', 'nots'=>'', 'latitude'=>'', 'longitude'=>'', 'city'=>'', 'radius'=>'', 'url'=>'', 'metric'=>'', 'tag'=>'', 'rule'=>'', 'slices'=>'', 'siteType'=>'', 'siteCategory'=>'', 'site'=>'', 'polygons'=>'', 'hasVideo'=>'', 'seeds'=>'', 'dos'=>''))
+					public static function create($projectId, $type, $name, $options=array('exactPhrase'=>'', 'ands'=>'', 'ors'=>'', 'nots'=>'', 'latitude'=>'', 'longitude'=>'', 'country_code'=>'', 'city'=>'', 'radius'=>'', 'url'=>'', 'metric'=>'', 'tag'=>'', 'rule'=>'', 'slices'=>'', 'siteType'=>'', 'siteCategory'=>'', 'site'=>'', 'polygons'=>'', 'hasVideo'=>'', 'seeds'=>'', 'dos'=>''))
 					{
 						$url = '/Search/create';
 
@@ -2230,7 +2231,7 @@
 						return NxApi::call($url,$post);
 					}
 				
-					public static function modify($projectId, $searchId, $type, $options=array('name'=>'', 'exactPhrase'=>'', 'ands'=>'', 'ors'=>'', 'nots'=>'', 'latitude'=>'', 'longitude'=>'', 'city'=>'', 'url'=>'', 'radius'=>'', 'tag'=>'', 'rule'=>'', 'metric'=>'', 'slices'=>'', 'siteType'=>'', 'siteCategory'=>'', 'site'=>'', 'polygons'=>'', 'hasVideo'=>'', 'seeds'=>'', 'dos'=>''))
+					public static function modify($projectId, $searchId, $type, $options=array('name'=>'', 'exactPhrase'=>'', 'ands'=>'', 'ors'=>'', 'nots'=>'', 'latitude'=>'', 'longitude'=>'', 'country_code'=>'', 'city'=>'', 'url'=>'', 'radius'=>'', 'tag'=>'', 'rule'=>'', 'metric'=>'', 'slices'=>'', 'siteType'=>'', 'siteCategory'=>'', 'site'=>'', 'polygons'=>'', 'hasVideo'=>'', 'seeds'=>'', 'dos'=>''))
 					{
 						$url = '/Search/modify';
 
