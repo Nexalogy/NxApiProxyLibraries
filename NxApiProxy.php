@@ -2296,9 +2296,22 @@
 						return NxApi::call($url,$post);
 					}
 				
-					public static function initial($projectId, $searchTerms, $options=array())
+					public static function initial($projectId, $searchTerms, $options=array('force'=>''))
 					{
 						$url = '/Search/initial';
+
+						$post = array(
+								'projectId'=>$projectId,
+			'searchTerms'=>$searchTerms,
+		);
+						if(@$options && is_array($options))
+						$post = array_merge($post,$options);
+						return NxApi::call($url,$post);
+					}
+				
+					public static function getInitialResult($projectId, $searchTerms, $options=array())
+					{
+						$url = '/Search/getInitialResult';
 
 						$post = array(
 								'projectId'=>$projectId,
