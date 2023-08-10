@@ -2360,7 +2360,7 @@
 						return NxApi::call($url,$post);
 					}
 				
-					public static function capture($projectId, $searchId, $options=array('limit'=>''))
+					public static function capture($projectId, $searchId, $options=array('limit'=>'', 'sample'=>''))
 					{
 						$url = '/Search/capture';
 
