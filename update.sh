@@ -20,7 +20,7 @@ updateLib() {
 	segment="${1}"
 	destFile="${2}"
 
-	wget -O ${destFile} "${sourceApiUrl}${segment}"
+	wget -q -O ${destFile} "${sourceApiUrl}${segment}"
 }
 
 
