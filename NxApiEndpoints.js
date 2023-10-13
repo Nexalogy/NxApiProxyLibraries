@@ -1,241 +1,35 @@
 
 				const NxApiEndpoints = {
 			
-			Ingestion : {
-				url : "/ingestion",
+			JobTemplate : {
+				url : "/jobTemplate",
 			
-						retrieveProjects : function(data,callback){
+						get : function(data,callback){
 							if(typeof(data)==="function")
 							{
 								callback = data;
 								data = {};
 							}
 						
-						let callUrl = this.url + "/retrieveProjects";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						IngestMessagesInProjects : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/IngestMessagesInProjects";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
-			ProxyController : {
-				url : "/proxyController",
-			
-				},
-			
-			ProjectFolder : {
-				url : "/projectFolder",
-			
-						getList : function(data,callback){
-						let callUrl = this.url + "/getList";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						create : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/create";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						rename : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/rename";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						delete : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/delete";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
-			Download : {
-				url : "/download",
-			
-				},
-			
-			Toad : {
-				url : "/toad",
-			
-						getStatus : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getStatus";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getPublisherSeedsFromActorByQuery : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getPublisherSeedsFromActorByQuery";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
-			Drdc : {
-				url : "/drdc",
-			
-						schedule : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/schedule";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						unschedule : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/unschedule";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getScheduleList : function(data,callback){
-						let callUrl = this.url + "/getScheduleList";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						generate : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/generate";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getSnapshotList : function(data,callback){
-						let callUrl = this.url + "/getSnapshotList";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						downloadSnapshot : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/downloadSnapshot";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
-			Feature : {
-				url : "/feature",
-			
-						changeAccess : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/changeAccess";
+						let callUrl = this.url + "/get";
 
 						return Nx.Api.call(callUrl,data,callback);
 						},
 
 					
 						getList : function(data,callback){
-						let callUrl = this.url + "/getList";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getInstanceAccess : function(data,callback){
 							if(typeof(data)==="function")
 							{
 								callback = data;
 								data = {};
 							}
 						
-						let callUrl = this.url + "/getInstanceAccess";
+						let callUrl = this.url + "/getList";
 
 						return Nx.Api.call(callUrl,data,callback);
 						},
 
 					
-				},
-			
-			Search : {
-				url : "/search",
-			
 						create : function(data,callback){
 							if(typeof(data)==="function")
 							{
@@ -262,303 +56,45 @@
 						},
 
 					
-						get : function(data,callback){
+						execute : function(data,callback){
 							if(typeof(data)==="function")
 							{
 								callback = data;
 								data = {};
 							}
 						
-						let callUrl = this.url + "/get";
+						let callUrl = this.url + "/execute";
 
 						return Nx.Api.call(callUrl,data,callback);
 						},
 
 					
-						getList : function(data,callback){
+						start : function(data,callback){
 							if(typeof(data)==="function")
 							{
 								callback = data;
 								data = {};
 							}
 						
-						let callUrl = this.url + "/getList";
+						let callUrl = this.url + "/start";
 
 						return Nx.Api.call(callUrl,data,callback);
 						},
 
 					
-						delete : function(data,callback){
+						stop : function(data,callback){
 							if(typeof(data)==="function")
 							{
 								callback = data;
 								data = {};
 							}
 						
-						let callUrl = this.url + "/delete";
+						let callUrl = this.url + "/stop";
 
 						return Nx.Api.call(callUrl,data,callback);
 						},
 
 					
-						duplicate : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/duplicate";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						initial : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/initial";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getInitialResult : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getInitialResult";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						preview : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/preview";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						test : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/test";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						topicSearch : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/topicSearch";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						capture : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/capture";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getDownload : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getDownload";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getSuggestedInterval : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getSuggestedInterval";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
-			Transmit : {
-				url : "/transmit",
-			
-						data : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/data";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
-			UnitTest : {
-				url : "/unitTest",
-			
-						resetTestInstance : function(data,callback){
-						let callUrl = this.url + "/resetTestInstance";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
-			Js : {
-				url : "/js",
-			
-						getScript : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getScript";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getToken : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getToken";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
-			Home : {
-				url : "/home",
-			
-				},
-			
-			ReportConfig : {
-				url : "/reportConfig",
-			
-						set : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/set";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						get : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/get";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getList : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getList";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						remove : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/remove";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getSchema : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getSchema";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
-			Jobs : {
-				url : "/jobs",
-			
 						status : function(data,callback){
 							if(typeof(data)==="function")
 							{
@@ -567,307 +103,6 @@
 							}
 						
 						let callUrl = this.url + "/status";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getArchivedJob : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getArchivedJob";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getList : function(data,callback){
-						let callUrl = this.url + "/getList";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
-			ProcessData : {
-				url : "/processData",
-			
-						processNERD : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/processNERD";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
-			Geoplaces : {
-				url : "/geoplaces",
-			
-						create : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/create";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						modify : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/modify";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						get : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/get";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getList : function(data,callback){
-						let callUrl = this.url + "/getList";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						remove : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/remove";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						autocomplete : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/autocomplete";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						autocompleteCities : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/autocompleteCities";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getCountryList : function(data,callback){
-						let callUrl = this.url + "/getCountryList";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
-			Publisher : {
-				url : "/publisher",
-			
-						getList : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getList";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						get : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/get";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getNb : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getNb";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
-			Alert : {
-				url : "/alert",
-			
-						get : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/get";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getList : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getList";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getRecordedAlerts : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getRecordedAlerts";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getDocumentsForRecordedAlerts : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getDocumentsForRecordedAlerts";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						create : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/create";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						delete : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/delete";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						modify : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/modify";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						check : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/check";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						testEmail : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/testEmail";
 
 						return Nx.Api.call(callUrl,data,callback);
 						},
@@ -1010,6 +245,223 @@
 					
 				},
 			
+			Document : {
+				url : "/document",
+			
+						delete : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/delete";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						renameFile : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/renameFile";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						get : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/get";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getList : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getList";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						saveMetadata : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/saveMetadata";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			Instance : {
+				url : "/instance",
+			
+						create : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/create";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						createAsync : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/createAsync";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						update : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/update";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						grantAccess : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/grantAccess";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						removeAccess : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/removeAccess";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getList : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getList";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getAccessList : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getAccessList";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						createProjectBuffers : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/createProjectBuffers";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						createProjectBuffersAsync : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/createProjectBuffersAsync";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			Upload : {
+				url : "/upload",
+			
+						getToken : function(data,callback){
+						let callUrl = this.url + "/getToken";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						progress : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/progress";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
 			CaptureApi : {
 				url : "/captureApi",
 			
@@ -1106,17 +558,456 @@
 					
 				},
 			
-			Twitter : {
-				url : "/twitter",
+			ProcessData : {
+				url : "/processData",
 			
-						callApi : function(data,callback){
+						processNERD : function(data,callback){
 							if(typeof(data)==="function")
 							{
 								callback = data;
 								data = {};
 							}
 						
-						let callUrl = this.url + "/callApi";
+						let callUrl = this.url + "/processNERD";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			Reports : {
+				url : "/reports",
+			
+						update : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/update";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getReportNames : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getReportNames";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						get : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/get";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getTypes : function(data,callback){
+						let callUrl = this.url + "/getTypes";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						generate : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/generate";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			Alert : {
+				url : "/alert",
+			
+						get : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/get";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getList : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getList";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getRecordedAlerts : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getRecordedAlerts";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getDocumentsForRecordedAlerts : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getDocumentsForRecordedAlerts";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						create : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/create";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						delete : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/delete";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						modify : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/modify";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						check : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/check";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						testEmail : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/testEmail";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			AutoCapture : {
+				url : "/autoCapture",
+			
+						run : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/run";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						start : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/start";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						reschedule : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/reschedule";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						stop : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/stop";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						stopAll : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/stopAll";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						status : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/status";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			Feature : {
+				url : "/feature",
+			
+						changeAccess : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/changeAccess";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getList : function(data,callback){
+						let callUrl = this.url + "/getList";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getInstanceAccess : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getInstanceAccess";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			BaseController : {
+				url : "/baseController",
+			
+				},
+			
+			Transmit : {
+				url : "/transmit",
+			
+						data : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/data";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			Drdc : {
+				url : "/drdc",
+			
+						schedule : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/schedule";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						unschedule : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/unschedule";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getScheduleList : function(data,callback){
+						let callUrl = this.url + "/getScheduleList";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						generate : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/generate";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getSnapshotList : function(data,callback){
+						let callUrl = this.url + "/getSnapshotList";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						downloadSnapshot : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/downloadSnapshot";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			Jobs : {
+				url : "/jobs",
+			
+						status : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/status";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getArchivedJob : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getArchivedJob";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getList : function(data,callback){
+						let callUrl = this.url + "/getList";
 
 						return Nx.Api.call(callUrl,data,callback);
 						},
@@ -1337,43 +1228,79 @@
 					
 				},
 			
-			Import : {
-				url : "/import",
+			Test : {
+				url : "/test",
 			
-						search : function(data,callback){
+				},
+			
+			Home : {
+				url : "/home",
+			
+				},
+			
+			ReportConfig : {
+				url : "/reportConfig",
+			
+						set : function(data,callback){
 							if(typeof(data)==="function")
 							{
 								callback = data;
 								data = {};
 							}
 						
-						let callUrl = this.url + "/search";
+						let callUrl = this.url + "/set";
 
 						return Nx.Api.call(callUrl,data,callback);
 						},
 
 					
-						file : function(data,callback){
+						get : function(data,callback){
 							if(typeof(data)==="function")
 							{
 								callback = data;
 								data = {};
 							}
 						
-						let callUrl = this.url + "/file";
+						let callUrl = this.url + "/get";
 
 						return Nx.Api.call(callUrl,data,callback);
 						},
 
 					
-						augmentation : function(data,callback){
+						getList : function(data,callback){
 							if(typeof(data)==="function")
 							{
 								callback = data;
 								data = {};
 							}
 						
-						let callUrl = this.url + "/augmentation";
+						let callUrl = this.url + "/getList";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						remove : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/remove";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getSchema : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getSchema";
 
 						return Nx.Api.call(callUrl,data,callback);
 						},
@@ -1490,418 +1417,6 @@
 					
 				},
 			
-			BaseController : {
-				url : "/baseController",
-			
-				},
-			
-			Instance : {
-				url : "/instance",
-			
-						create : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/create";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						createAsync : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/createAsync";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						update : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/update";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						grantAccess : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/grantAccess";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						removeAccess : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/removeAccess";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getList : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getList";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getAccessList : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getAccessList";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						createProjectBuffers : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/createProjectBuffers";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						createProjectBuffersAsync : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/createProjectBuffersAsync";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
-			Document : {
-				url : "/document",
-			
-						delete : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/delete";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						renameFile : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/renameFile";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						get : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/get";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getList : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getList";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						saveMetadata : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/saveMetadata";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
-			Reports : {
-				url : "/reports",
-			
-						update : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/update";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getReportNames : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getReportNames";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						get : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/get";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getTypes : function(data,callback){
-						let callUrl = this.url + "/getTypes";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						generate : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/generate";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
-			Upload : {
-				url : "/upload",
-			
-						getToken : function(data,callback){
-						let callUrl = this.url + "/getToken";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						progress : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/progress";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
-			AutoCapture : {
-				url : "/autoCapture",
-			
-						run : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/run";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						start : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/start";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						reschedule : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/reschedule";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						stop : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/stop";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						stopAll : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/stopAll";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						status : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/status";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
-			Test : {
-				url : "/test",
-			
-				},
-			
-			Translation : {
-				url : "/translation",
-			
-						translateText : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/translateText";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						translateData : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/translateData";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getAvailableLangs : function(data,callback){
-						let callUrl = this.url + "/getAvailableLangs";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
 			Export : {
 				url : "/export",
 			
@@ -1952,6 +1467,198 @@
 							}
 						
 						let callUrl = this.url + "/project";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			Docs : {
+				url : "/docs",
+			
+				},
+			
+			Credit : {
+				url : "/credit",
+			
+						getAccountList : function(data,callback){
+						let callUrl = this.url + "/getAccountList";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						calculateSummary : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/calculateSummary";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						createPeriod : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/createPeriod";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getPeriods : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getPeriods";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						createAccount : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/createAccount";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						saveTransaction : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/saveTransaction";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			ProxyController : {
+				url : "/proxyController",
+			
+				},
+			
+			Twitter : {
+				url : "/twitter",
+			
+						callApi : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/callApi";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			Js : {
+				url : "/js",
+			
+						getScript : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getScript";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getToken : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getToken";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			Import : {
+				url : "/import",
+			
+						search : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/search";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						file : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/file";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						augmentation : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/augmentation";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			UnitTest : {
+				url : "/unitTest",
+			
+						resetTestInstance : function(data,callback){
+						let callUrl = this.url + "/resetTestInstance";
 
 						return Nx.Api.call(callUrl,data,callback);
 						},
@@ -2199,6 +1906,490 @@
 							}
 						
 						let callUrl = this.url + "/renameGroup";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			Ingestion : {
+				url : "/ingestion",
+			
+						retrieveProjects : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/retrieveProjects";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						IngestMessagesInProjects : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/IngestMessagesInProjects";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			Search : {
+				url : "/search",
+			
+						create : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/create";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						modify : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/modify";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						get : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/get";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getList : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getList";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						delete : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/delete";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						duplicate : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/duplicate";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						initial : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/initial";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getInitialResult : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getInitialResult";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						preview : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/preview";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						test : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/test";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						topicSearch : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/topicSearch";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						capture : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/capture";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getDownload : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getDownload";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getSuggestedInterval : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getSuggestedInterval";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			Toad : {
+				url : "/toad",
+			
+						getStatus : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getStatus";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getPublisherSeedsFromActorByQuery : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getPublisherSeedsFromActorByQuery";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			Download : {
+				url : "/download",
+			
+				},
+			
+			Translation : {
+				url : "/translation",
+			
+						translateText : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/translateText";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						translateData : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/translateData";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getAvailableLangs : function(data,callback){
+						let callUrl = this.url + "/getAvailableLangs";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			ProjectFolder : {
+				url : "/projectFolder",
+			
+						getList : function(data,callback){
+						let callUrl = this.url + "/getList";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						create : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/create";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						rename : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/rename";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						delete : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/delete";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			Geoplaces : {
+				url : "/geoplaces",
+			
+						create : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/create";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						modify : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/modify";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						get : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/get";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getList : function(data,callback){
+						let callUrl = this.url + "/getList";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						remove : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/remove";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						autocomplete : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/autocomplete";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						autocompleteCities : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/autocompleteCities";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getCountryList : function(data,callback){
+						let callUrl = this.url + "/getCountryList";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+				},
+			
+			Publisher : {
+				url : "/publisher",
+			
+						getList : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getList";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						get : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/get";
+
+						return Nx.Api.call(callUrl,data,callback);
+						},
+
+					
+						getNb : function(data,callback){
+							if(typeof(data)==="function")
+							{
+								callback = data;
+								data = {};
+							}
+						
+						let callUrl = this.url + "/getNb";
 
 						return Nx.Api.call(callUrl,data,callback);
 						},
@@ -2523,151 +2714,38 @@
 					
 				},
 			
-			JobTemplate : {
-				url : "/jobTemplate",
-			
-						get : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/get";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						getList : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/getList";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						create : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/create";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						modify : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/modify";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						execute : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/execute";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						start : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/start";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						stop : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/stop";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-						status : function(data,callback){
-							if(typeof(data)==="function")
-							{
-								callback = data;
-								data = {};
-							}
-						
-						let callUrl = this.url + "/status";
-
-						return Nx.Api.call(callUrl,data,callback);
-						},
-
-					
-				},
-			
-			Docs : {
-				url : "/docs",
-			
-				},
-			
 			_asyncInfo : [
-				"/drdc/generate",
-		"/search/initial",
-		"/search/topicSearch",
-		"/search/capture",
+				"/jobTemplate/execute",
+		"/dictionary/applyCsvCustom",
+		"/instance/create",
+		"/instance/createProjectBuffers",
+		"/instance/createProjectBuffersAsync",
 		"/processData/processNERD",
+		"/reports/generate",
 		"/alert/check",
 		"/alert/testEmail",
-		"/dictionary/applyCsvCustom",
+		"/autoCapture/run",
+		"/drdc/generate",
 		"/automatedReport/generateForAlert",
 		"/automatedReport/generateAnalyzeDoc",
 		"/automatedReport/generate",
-		"/import/search",
-		"/import/file",
-		"/import/augmentation",
 		"/filter/getElasticsearchFilter",
 		"/filter/compileFilter",
 		"/filter/create",
 		"/filter/modify",
-		"/instance/create",
-		"/instance/createProjectBuffers",
-		"/instance/createProjectBuffersAsync",
-		"/reports/generate",
-		"/autoCapture/run",
 		"/export/data",
 		"/export/project",
+		"/import/search",
+		"/import/file",
+		"/import/augmentation",
+		"/search/initial",
+		"/search/test",
+		"/search/topicSearch",
+		"/search/capture",
 		"/project/cloneWithData",
 		"/project/copyData",
 		"/project/createFromProjectData",
 		"/project/waitForPreprocessing",
-		"/project/filterMultipleProjectsIntoOne",
-		"/jobTemplate/execute"
+		"/project/filterMultipleProjectsIntoOne"
 				]
 		};

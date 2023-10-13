@@ -707,6 +707,86 @@
 				
 				}
 			
+				class NxApiCredit
+				{
+			
+					public static function getAccountList($options=array())
+					{
+						$url = '/Credit/getAccountList';
+
+						$post = array(
+							);
+						if(@$options && is_array($options))
+						$post = array_merge($post,$options);
+						return NxApi::call($url,$post);
+					}
+				
+					public static function calculateSummary($creditPeriodId, $accountId, $options=array())
+					{
+						$url = '/Credit/calculateSummary';
+
+						$post = array(
+								'creditPeriodId'=>$creditPeriodId,
+			'accountId'=>$accountId,
+		);
+						if(@$options && is_array($options))
+						$post = array_merge($post,$options);
+						return NxApi::call($url,$post);
+					}
+				
+					public static function createPeriod($startDate, $periodTypeLength, $options=array())
+					{
+						$url = '/Credit/createPeriod';
+
+						$post = array(
+								'startDate'=>$startDate,
+			'periodTypeLength'=>$periodTypeLength,
+		);
+						if(@$options && is_array($options))
+						$post = array_merge($post,$options);
+						return NxApi::call($url,$post);
+					}
+				
+					public static function getPeriods($options=array('startDate'=>'', 'endDate'=>'', 'periodLengthType'=>''))
+					{
+						$url = '/Credit/getPeriods';
+
+						$post = array(
+							);
+						if(@$options && is_array($options))
+						$post = array_merge($post,$options);
+						return NxApi::call($url,$post);
+					}
+				
+					public static function createAccount($accountName, $options=array('userId'=>'', 'userName'=>'', 'email'=>'', 'password'=>'', 'lang'=>'', 'phoneNumber'=>''))
+					{
+						$url = '/Credit/createAccount';
+
+						$post = array(
+								'accountName'=>$accountName,
+		);
+						if(@$options && is_array($options))
+						$post = array_merge($post,$options);
+						return NxApi::call($url,$post);
+					}
+				
+					public static function saveTransaction($accountId, $amount, $creditType, $note, $options=array())
+					{
+						$url = '/Credit/saveTransaction';
+
+						$post = array(
+								'accountId'=>$accountId,
+			'amount'=>$amount,
+			'creditType'=>$creditType,
+			'note'=>$note,
+		);
+						if(@$options && is_array($options))
+						$post = array_merge($post,$options);
+						return NxApi::call($url,$post);
+					}
+				
+				}
+			
 				class NxApiDictionary
 				{
 			
@@ -2335,7 +2415,7 @@
 						return NxApi::call($url,$post);
 					}
 				
-					public static function test($type, $options=array('exactPhrase'=>'', 'ands'=>'', 'ors'=>'', 'nots'=>'', 'language'=>'', 'latitude'=>'', 'longitude'=>'', 'city'=>'', 'radius'=>'', 'url'=>'', 'metric'=>'', 'tag'=>'', 'rule'=>'', 'slices'=>'', 'langTag'=>'', 'siteType'=>'', 'siteCategory'=>'', 'site'=>'', 'hasVideo'=>'', 'polygons'=>'', 'startFrom'=>''))
+					public static function test($type, $options=array('exactPhrase'=>'', 'ands'=>'', 'ors'=>'', 'nots'=>'', 'language'=>'', 'latitude'=>'', 'longitude'=>'', 'city'=>'', 'radius'=>'', 'url'=>'', 'metric'=>'', 'tag'=>'', 'rule'=>'', 'slices'=>'', 'langTag'=>'', 'siteType'=>'', 'siteCategory'=>'', 'site'=>'', 'hasVideo'=>'', 'polygons'=>'', 'startFrom'=>'', 'projectId'=>''))
 					{
 						$url = '/Search/test';
 
@@ -2347,13 +2427,14 @@
 						return NxApi::call($url,$post);
 					}
 				
-					public static function topicSearch($projectId, $searches, $options=array())
+					public static function topicSearch($projectId, $searches, $initialSearch, $options=array())
 					{
 						$url = '/Search/topicSearch';
 
 						$post = array(
 								'projectId'=>$projectId,
 			'searches'=>$searches,
+			'initialSearch'=>$initialSearch,
 		);
 						if(@$options && is_array($options))
 						$post = array_merge($post,$options);
@@ -2576,7 +2657,7 @@
 						return NxApi::call($url,$post);
 					}
 				
-					public static function create($email, $role, $options=array('password'=>'', 'lang'=>'', 'userName'=>'', 'company'=>'', 'phone'=>'', 'domainId'=>''))
+					public static function create($email, $role, $options=array('password'=>'', 'lang'=>'', 'userName'=>'', 'company'=>'', 'phone'=>'', 'domainId'=>'', 'accountId'=>''))
 					{
 						$url = '/Users/create';
 
